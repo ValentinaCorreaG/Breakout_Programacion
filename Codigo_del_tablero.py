@@ -1,6 +1,6 @@
 import pygame #nos permite importar la libreria de Pygame 
 from pygame.locals import *
-from pygame import mixer #Importamos el modulo para reproduccion musical en pygame
+from pygame import mixer #Importamos el modulo para reproduccion musical en pygame 
 
 
 class Boton(): #clase donde se encuentra el boton inicial
@@ -52,9 +52,6 @@ while run:
 
 	if start_boton.dibujar(screen):
 		run = False
-	
-
-   
 	
 	for event in pygame.event.get():
 		
@@ -289,7 +286,9 @@ while run:
     ventana.blit(ganador, (110,400))
     pelota.velocidad_y = 0
     pelota.velocidad_x = 0
+    mixer.music.set_volume(0)
  
   pygame.display.update()
 
 pygame.quit()
+
